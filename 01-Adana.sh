@@ -1,5 +1,5 @@
 : '
-01-Adana.sh, pre-install script for Arch Linux installer.
+    01-Adana.sh, pre-install script for Arch Linux installer.
     Copyright (C) 2021  Erdem Harputlugil
 
     This program is free software: you can redistribute it and/or modify
