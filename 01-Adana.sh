@@ -16,11 +16,11 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>. 
 '
 #!/usr/bin/env bash
-#This script is pre-install script for Arch install, Adana-01
+#This script is pre-install script for Arch install, 01-Adana
 #Mostly this installer is going to use whiptail as ui for more user friendly use
 
 
-#Defining whiptail dimensions, 20 rows and 70 chars for even smaller scrrens
+#Defining whiptail dimensions, 20 rows and 70 chars for smaller scrrens
 r=20
 c=70
 #Welcome message
