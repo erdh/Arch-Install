@@ -19,25 +19,24 @@
 #This script is pre-install script for Arch install, 01-Adana
 #Mostly this installer is going to use whiptail as ui for more user friendly use
 
-
 #Defining whiptail dimensions, 20 rows and 70 chars for small screens
 r=20
 c=70
 #Welcome message and confirmation for installing process Adana
 whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
 if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
-    01-Adana_01
-    01-Adana_02
+    Aladag
+    Ceyhan
 else
     echo "User selected No, installation aborted"
 fi
-01-Adana_01()
+Aladag()# A district of Adana
 {
     #Choosing keyboard layout
     whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
     "TODO: add keyboard layouts arch linux support"/
 }
-01-Adana_02()
+Ceyhan()# An another district of Adana
 {
     #Finding location via ifconfig.co to use best mirror possible
     loc=$(curl -4 ifconfig.co/country-iso)
