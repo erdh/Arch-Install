@@ -27,6 +27,7 @@ c=70
 whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
 if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
     01-Adana_01
+    01-Adana_02
 else
     echo "User selected No, installation aborted"
 fi
