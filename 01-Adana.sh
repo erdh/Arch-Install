@@ -42,4 +42,4 @@ fi
     loc=$(curl -4 ifconfig.co/country-iso)
     #Not to be way behind schedule ;)
     timedatectl set-ntp true
-}
+} | whiptail --gauge "Please wait while things are happening" 6 50 0
