@@ -19,20 +19,6 @@
 #This script is pre-install script for Arch install, 01-Adana
 #Mostly this installer is going to use whiptail as ui for more user friendly use
 
-#defining functions before commands
-function Aladag  {
-    #Choosing keyboard layout
-    whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
-    "TODO:"\
-    "add keyboard layouts arch linux support"
-}
-function Ceyhan  {
-    #Finding location via ifconfig.co to use best mirror possible
-    loc=$(curl -4 ifconfig.co/country-iso)
-    #Not to be way behind schedule ;)
-    timedatectl set-ntp true
-} | whiptail --gauge "Please wait while things are happening" 6 50 0
-
 #Defining whiptail dimensions, 20 rows and 70 chars for small screens
 r=20
 c=70
@@ -44,4 +30,15 @@ if (whiptail --title "Confirmation" --yesno "This script is going to install Arc
 else
     echo "User selected No, installation aborted"
 fi
-
+Aladag  {
+    #Choosing keyboard layout
+    whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
+    "TODO:"\
+    "add keyboard layouts arch linux support"
+}
+Ceyhan  {
+    #Finding location via ifconfig.co to use best mirror possible
+    loc=$(curl -4 ifconfig.co/country-iso)
+    #Not to be way behind schedule ;)
+    timedatectl set-ntp true
+} | whiptail --gauge "Please wait while things are happening" 6 50 0
