@@ -33,7 +33,8 @@ fi
 Aladag  {
     #Choosing keyboard layout
     whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
-    "TODO: add keyboard layouts arch linux support"/
+    "TODO:"\
+    "add keyboard layouts arch linux support"
 }
 Ceyhan  {
     #Finding location via ifconfig.co to use best mirror possible
