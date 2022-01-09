@@ -23,14 +23,8 @@
 #Defining whiptail dimensions, 20 rows and 70 chars for small screens
 r=20
 c=70
-#Welcome message and confirmation for installing process Adana
-whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
-if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
-    01-Adana_01
-    01-Adana_02
-else
-    echo "User selected No, installation aborted"
-fi
+
+#Defining all the magic
 01-Adana_01()
 {
     #Choosing keyboard layout
@@ -44,3 +38,13 @@ fi
     #Not to be way behind schedule ;)
     timedatectl set-ntp true
 } | whiptail --gauge "Please wait while things are happening" 6 50 0
+
+#Welcome message and confirmation for installing process Adana
+whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
+if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
+    01-Adana_01
+    01-Adana_02
+else
+    echo "User selected No, installation aborted"
+fi
+
