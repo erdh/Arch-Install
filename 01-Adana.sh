@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 : '
     01-Adana.sh, pre-install script for Arch Linux installer.
     Copyright (C) 2021  Erdem Harputlugil
@@ -15,9 +16,10 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>. 
 '
-#!/usr/bin/env bash
 #This script is pre-install script for Arch install, 01-Adana
 #Mostly this installer is going to use whiptail as ui for more user friendly use
+
+#Defining all the magic
 Aladag ()  {
     #Choosing keyboard layout
     whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
@@ -30,10 +32,12 @@ Ceyhan () {
     #Not to be way behind schedule ;)
     timedatectl set-ntp true | whiptail --gauge "Please wait while things are happening" 6 50 0
 } 
+
 #Defining whiptail dimensions, 20 rows and 70 chars for small screens
 r=20
 c=70
-#Welcome message and confirmation for installing process Adana
+
+#Welcome message and confirmation for installing process, Adana
 whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
 if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
     Aladag # A district of Adana
