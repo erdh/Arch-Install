@@ -20,7 +20,7 @@
 #Mostly this installer is going to use whiptail as ui for more user friendly use
 
 
-#Defining whiptail dimensions, 20 rows and 70 chars for smaller scrrens
+#Defining whiptail dimensions, 20 rows and 70 chars for small screens
 r=20
 c=70
 #Welcome message
