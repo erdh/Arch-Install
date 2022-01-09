@@ -32,7 +32,14 @@ else
 fi
 01-Adana_01()
 {
+    #Choosing keyboard layout
+    whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
+    "TODO: add keyboard layouts arch linux support"/
+}
+01-Adana_02()
+{
     #Finding location via ifconfig.co to use best mirror possible
     loc=$(curl -4 ifconfig.co/country-iso)
+    #Not to be way behind schedule ;)
     timedatectl set-ntp true
 }
