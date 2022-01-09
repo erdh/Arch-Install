@@ -23,5 +23,16 @@
 #Defining whiptail dimensions, 20 rows and 70 chars for small screens
 r=20
 c=70
-#Welcome message
-whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your device" "${r}" "${c}"
+#Welcome message and confirmation for installing process Adana
+whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
+if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
+    01-Adana_01
+else
+    echo "User selected No, installation aborted"
+fi
+01-Adana_01()
+{
+    #Finding location via ifconfig.co to use best mirror possible
+    loc=$(curl -4 ifconfig.co/country-iso)
+    timedatectl set-ntp true
+}
