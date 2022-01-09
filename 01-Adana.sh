@@ -25,19 +25,17 @@ c=70
 #Welcome message and confirmation for installing process Adana
 whiptail --msgbox --backtitle "Welcome" --title "Arch Automated Installer" "\\n\\nThis installer will install Arch Linux on your computer" "${r}" "${c}"
 if (whiptail --title "Confirmation" --yesno "This script is going to install Arch Linux on your computer, are you sure to continiue?" 8 78); then
-    Aladag
-    Ceyhan
+    Aladag # A district of Adana
+    Ceyhan # An another district of Adana
 else
     echo "User selected No, installation aborted"
 fi
-Aladag()# A district of Adana
-{
+Aladag  {
     #Choosing keyboard layout
     whiptail --title "Keyboard Layout" --menu "Please choose your keyboard layout" 25 78 16 \
     "TODO: add keyboard layouts arch linux support"/
 }
-Ceyhan()# An another district of Adana
-{
+Ceyhan  {
     #Finding location via ifconfig.co to use best mirror possible
     loc=$(curl -4 ifconfig.co/country-iso)
     #Not to be way behind schedule ;)
