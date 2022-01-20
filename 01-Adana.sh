@@ -27,10 +27,11 @@ Aladag ()  {
     "add keyboard layouts arch linux support"
 }
 Ceyhan () {
+    whiptail --gauge "Please wait while things are happening" 6 50 0
     #Finding location via ifconfig.co to use best mirror possible
     loc=$(curl -4 ifconfig.co/country-iso)
     #Not to be way behind schedule ;)
-    timedatectl set-ntp true | whiptail --gauge "Please wait while things are happening" 6 50 0
+    timedatectl set-ntp true
 } 
 
 #Defining whiptail dimensions, 20 rows and 70 chars for small screens
